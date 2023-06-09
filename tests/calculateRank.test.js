@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { calculateRank } from "../src/calculateRank.js";
 
-// describe("Test calculateRank", () => {
+describe("Test calculateRank", () => {
 //   it("new user gets B rank", () => {
 //     expect(
 //       calculateRank({
@@ -72,17 +72,17 @@ import { calculateRank } from "../src/calculateRank.js";
 //     ).toStrictEqual({ level: "S", score: 6.25 });
 //   });
 
-//   it("ezyang gets S+ rank", () => {
-//     expect(
-//       calculateRank({
-//         all_commits: false,
-//         commits: 1000,
-//         prs: 4000,
-//         issues: 2000,
-//         repos: 0,
-//         stars: 5000,
-//         followers: 2000,
-//       }),
-//     ).toStrictEqual({ level: "S+", score: 1.1363983154296875 });
-//   });
-// });
+  it("ezyang gets S+ rank", () => {
+    expect(
+      calculateRank({
+        all_commits: false,
+        commits: 1000,
+        prs: 4000,
+        issues: 2000,
+        repos: 0,
+        stars: 5000,
+        followers: 2000,
+      }),
+    ).toStrictEqual({ level: "S+", score: 1.1363983154296875 });
+  });
+});
