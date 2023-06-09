@@ -24,15 +24,25 @@ function calculateRank({
   stars,
   followers,
 }) {
-  const COMMITS_MEAN = all_commits ? 1000 : 250,
+//   const COMMITS_MEAN = all_commits ? 1000 : 250,
+//     COMMITS_WEIGHT = 2;
+//   const PRS_MEAN = 50,
+//     PRS_WEIGHT = 3;
+//   const ISSUES_MEAN = 25,
+//     ISSUES_WEIGHT = 1;
+//   const STARS_MEAN = 250,
+//     STARS_WEIGHT = 4;
+//   const FOLLOWERS_MEAN = 25,
+//     FOLLOWERS_WEIGHT = 1;
+  const COMMITS_MEAN = all_commits ? 500 : 125,
     COMMITS_WEIGHT = 2;
-  const PRS_MEAN = 50,
+  const PRS_MEAN = 20,
     PRS_WEIGHT = 3;
-  const ISSUES_MEAN = 25,
+  const ISSUES_MEAN = 10,
     ISSUES_WEIGHT = 1;
-  const STARS_MEAN = 250,
+  const STARS_MEAN = 100,
     STARS_WEIGHT = 4;
-  const FOLLOWERS_MEAN = 25,
+  const FOLLOWERS_MEAN = 10,
     FOLLOWERS_WEIGHT = 1;
 
   const TOTAL_WEIGHT =
