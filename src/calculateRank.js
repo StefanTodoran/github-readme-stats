@@ -59,7 +59,7 @@ function calculateRank({
       STARS_WEIGHT * expsf(stars, 1 / STARS_MEAN) +
       FOLLOWERS_WEIGHT * expsf(followers, 1 / FOLLOWERS_MEAN)) /
     TOTAL_WEIGHT;
-  rank = rank / 2;
+  rank = rank / 10;
 
   const RANK_S_PLUS = 0.025;
   const RANK_S = 0.1;
