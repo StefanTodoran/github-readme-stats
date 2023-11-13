@@ -44,17 +44,17 @@ function calculateRank({
   stars,
   followers,
 }) {
-  const COMMITS_MEDIAN = all_commits ? 1000 : 250,
-    COMMITS_WEIGHT = 2;
-  const PRS_MEDIAN = 50,
-    PRS_WEIGHT = 3;
-  const ISSUES_MEDIAN = 25,
+  const COMMITS_MEDIAN = all_commits ? 500 : 123,
+    COMMITS_WEIGHT = 3;
+  const PRS_MEDIAN = 20,
+    PRS_WEIGHT = 2;
+  const ISSUES_MEDIAN = 10,
     ISSUES_WEIGHT = 1;
   const REVIEWS_MEDIAN = 2,
-    REVIEWS_WEIGHT = 1;
-  const STARS_MEDIAN = 50,
+    REVIEWS_WEIGHT = 0;
+  const STARS_MEDIAN = 10,
     STARS_WEIGHT = 4;
-  const FOLLOWERS_MEDIAN = 10,
+  const FOLLOWERS_MEDIAN = 5,
     FOLLOWERS_WEIGHT = 1;
 
   const TOTAL_WEIGHT =
@@ -66,7 +66,7 @@ function calculateRank({
     FOLLOWERS_WEIGHT;
 
   const THRESHOLDS = [1, 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100];
-  const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
+  const LEVELS = ["S+", "S", "A+", "A", "A-", "B+", "B", "B-", "C+"];
 
   const rank =
     1 -
